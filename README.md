@@ -1,0 +1,1 @@
+This is my second HTML & CSS project fresh out of the Responsive Web Design certification from freeCodeCamp.
