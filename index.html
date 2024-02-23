@@ -22,19 +22,23 @@
 
     </head>
     <body>
+        
         <section id="desc">
         <h1>HTML & CSS Form Project</h1>
-        <p>This is a HTML form project based on
+        <p>This is a HTML form project based on<br>
         <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form">
         How to structure a web form.</a>
         </p>
         <p>The project will be focused on creating an <strong>accessible</strong> fictional payment form.</p>
         </section>
 
-        <form
-        id="form">
-        <h1>Payment form</h1>
+        <section id="payment-container"> <!-- payment content START -->
+
+        <form id="form">
+        <h1>Enter your card details</h1>
         <p>
+            To place your order, we need your card details.<br>
+            Please enter them below and validate the payment.<br>
             Required forms are followed by
             <strong><span aria-hidden="true">*</span></strong>.
         </p>
@@ -80,11 +84,13 @@
                     >
                 </p>
         </section>
-        <section id="validate">
-            <h4>To validate the payment, press the button below</h4>
+        <div id="validate">
             <button type="submit">Validate the payment</button>
-        </section>
+        </div>
 
+    </section><!-- payment content END -->
+        </section>
         </form>
-    </body>
+        </section>
+        </body>
 </html>
