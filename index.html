@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Validated HTML: https://validator.w3.org/#validate_by_input -->
-    <head>
+<head>
 
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-        <meta name="description"
-        content="Second HTML & CSS project (Project 2)">
+    <meta name="description"
+    content="Second HTML & CSS project (Project 2)">
 
-        <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
-        <meta name="author"
-        content="Noah Gibson">
+    <meta name="author"
+    content="Noah Gibson">
 
-        <link rel="stylesheet" href="styles.css" >
+    <link rel="stylesheet" href="styles.css">
 
-        <title>
-            HTML & CSS Form Project
-        </title>
+    <title>
+        HTML & CSS Form Project
+    </title>
 
-    </head>
-    <body>
-        
-        <section id="desc">
-        <h1>HTML & CSS Form Project</h1>
-        <p>This is a HTML form project based on<br>
+</head>
+
+<body>
+
+<section id="desc">
+    <h1>HTML & CSS Form Project</h1>
+    <p>This is an HTML form project based on<br>
         <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form">
-        How to structure a web form.</a>
-        </p>
-        <p>The project will be focused on creating an <strong>accessible</strong> fictional payment form.</p>
-        </section>
+            How to structure a web form.</a>
+    </p>
+    <p>The project will be focused on creating an <strong>accessible</strong> fictional payment form.</p>
+</section>
 
-        <section id="payment-container"> <!-- payment content START -->
+<section id="payment-container"> <!-- payment content START -->
 
-        <form id="form">
+    <form id="form">
         <h1>Enter your card details</h1>
         <p>
             To place your order, we need your card details.<br>
@@ -44,53 +45,53 @@
         </p>
 
         <section
-        id="payment-info">
+                id="payment-info">
             <h2>Payment Information</h2>
-                <p>
-                    <label
-                    for="card">
-                        <span>Card type:</span>
-                        <strong><span aria-hidden="true">*</span></strong>
-                    </label>
-                    <select
-                    id="card" name="usercard" aria-required="true">
-                        <option value="visa">Visa</option>
-                        <option value="mc">Mastercard</option>
-                        <option value="amex">American Express</option>
-                    </select>
-                </p>
-                <p>
-                    <label
-                    for="number">
-                        <span>Card number:</span>
-                        <strong><span aria-hidden="true">*</span></strong>
-                    </label> <!-- I added maxlength and minlength attributes to stop users from entering faulty numbers -->
-                    <input aria-required="true" type="tel" id="number" name="cardnumber" maxlength="16" minlength="16" placeholder="Enter 16 digit card number" required>
-                </p>
-                <p>
-                    <label
-                    for="expiration">
-                        <span>Expiration date:</span>
-                        <strong><span aria-hidden="true">*</span></strong>
-                    </label>
-                    <input
-                    aria-required="true"
-                    type="text"
-                    id="expiration"
-                    name="expiration"
-                    required
-                    placeholder="MM/YY"
-                    pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$"
-                    >
-                </p>
+            <p>
+                <label
+                        for="card">
+                    <span>Card type:</span>
+                    <strong><span aria-hidden="true">*</span></strong>
+                </label>
+                <select
+                        id="card" name="usercard" aria-required="true">
+                    <option value="visa">Visa</option>
+                    <option value="mc">Mastercard</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </p>
+            <p>
+                <label
+                        for="number">
+                    <span>Card number:</span>
+                    <strong><span aria-hidden="true">*</span></strong>
+                </label> <!-- I added maxlength and minlength attributes to stop users from entering faulty numbers -->
+                <input aria-required="true" type="tel" id="number" name="cardnumber" maxlength="16" minlength="16" placeholder="Enter 16 digit card number" required>
+            </p>
+            <p>
+                <label
+                        for="expiration">
+                    <span>Expiration date:</span>
+                    <strong><span aria-hidden="true">*</span></strong>
+                </label>
+                <input
+                        aria-required="true"
+                        type="text"
+                        id="expiration"
+                        name="expiration"
+                        required
+                        placeholder="MM/YY"
+                        pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$"
+                >
+            </p>
         </section>
         <div id="validate">
             <button type="submit">Validate the payment</button>
         </div>
 
-    </section><!-- payment content END -->
-        </section>
-        </form>
-        </section>
-        </body>
+    </form><!-- payment content END -->
+
+</section>
+
+</body>
 </html>
