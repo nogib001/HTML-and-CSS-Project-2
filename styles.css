@@ -100,3 +100,26 @@ button {
   padding: 0.5em;
   margin-top: 2em;
 }
+
+/* RESPONSIVENESS */
+
+@media screen and  (max-width: 720px) {
+
+  #desc {
+    display: row;
+    
+    width: 100%;
+    max-width: 100%;
+  }
+
+    #card, #number, #expiration {
+    display: flex;
+    flex-direction: row;
+    gap: nowrap;
+  }
+
+  #form {
+    width: 100%;
+    max-width: 100%;
+  }
+}
