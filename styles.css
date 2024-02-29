@@ -17,6 +17,7 @@ html {
 :root {
   --main-text: 0.8rem "Helvetica", Arial, sans-serif;
   --header-text: 1.6rem "Georgia", "Lucida Grande", serif;
+  --small-header-text: 1.2rem "Georgia", "Lucida Grande", serif;
   --background: #0D0540;
   --text-color: #F2F2F2;
   --header-color: #F27405;
@@ -24,6 +25,7 @@ html {
   --link-color: #f29c05;
   --button-color: #0583f2;
   --form-background: #1b0b87;
+  --form-width: 50vw;
 }
 
 * {
@@ -44,10 +46,14 @@ body {
 }
 
 h1,
-h2,
+h2 {
+  font: var(--header-text);
+  color: var(--header-color);
+}
+
 h3,
 h4 {
-  font: var(--header-text);
+  font: var(--small-header-text);
   color: var(--header-color);
 }
 
@@ -66,6 +72,10 @@ a:hover {
 
 
 /* SPECIFIC STYLES */
+
+h2 {
+  margin-bottom: 1rem;
+}
 
 #payment-container {
   width: 50vw;
@@ -89,6 +99,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  margin-bottom: 2.5rem;
 }
 
 #desc {
@@ -100,7 +111,7 @@ a:hover {
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 2rem;
-  width: 50vw;
+  width: var(--form-width);
   max-width: 100%;
 }
 
@@ -111,7 +122,8 @@ a:hover {
 }
 
 button {
-  width: 12rem;
+  width: calc(var(--form-width) - 50%);
+  max-width: 100%;
   background-color: var(--link-color);
   padding: 0.5rem;
   margin-top: 2rem;
