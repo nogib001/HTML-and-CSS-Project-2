@@ -54,8 +54,7 @@ id="payment-container"> <!-- payment content START -->
 
         <p
         class="req">
-            Required forms are followed by
-            <strong><span aria-hidden="true">*</span></strong>.
+            Required forms are followed by <strong><span class="asterisk" aria-hidden="true">*</span></strong>
         </p>
         </div>
         </section>
@@ -65,8 +64,7 @@ id="payment-container"> <!-- payment content START -->
             <p>
                 <label
                         for="card">
-                    <span>Card type:</span>
-                    <strong><span aria-hidden="true">*</span></strong>
+                    <span class="field-name">Card type:</span> <strong><span class="asterisk" aria-hidden="true">*</span></strong>
                 </label>
                 <select
                         id="card" name="usercard" aria-required="true">
@@ -78,16 +76,16 @@ id="payment-container"> <!-- payment content START -->
             <p>
                 <label
                         for="number">
-                    <span>Card number:</span>
-                    <strong><span aria-hidden="true">*</span></strong>
+                    <span class="field-name">Card number:</span>
+                    <strong><span class="asterisk" aria-hidden="true">*</span></strong>
                 </label> <!-- I added maxlength and minlength attributes to stop users from entering faulty numbers -->
                 <input aria-required="true" type="tel" id="number" name="cardnumber" maxlength="16" minlength="16" placeholder="Enter 16 digit card number" required>
             </p>
             <p>
                 <label
                         for="expiration">
-                    <span>Expiration date:</span>
-                    <strong><span aria-hidden="true">*</span></strong>
+                    <span class="field-name">Expiration date:</span>
+                    <strong><span class="asterisk"><aria-hidden="true">*</span></strong>
                 </label>
                 <input
                         aria-required="true"
