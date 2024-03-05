@@ -48,7 +48,7 @@ id="payment-container"> <!-- payment content START -->
         class="section-content">
         <h3>Enter your card details</h3>
         <p>
-            To place your order, we need your card details.
+            To place your order, we need your card details.<br>
             Please enter them below and validate the payment.
         </p>
 
@@ -88,18 +88,20 @@ id="payment-container"> <!-- payment content START -->
                     <strong><span class="asterisk"><aria-hidden="true">*</span></strong>
                 </label>
                 <input
-                        aria-required="true"
-                        type="text"
-                        id="expiration"
-                        name="expiration"
-                        required
-                        placeholder="MM/YY"
-                        pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$"
-                >
+                aria-required="true"
+                type="text"
+                id="expiration"
+                name="expiration"
+                required
+                placeholder="MM/YY"
+                pattern="^(0[1-9]|1[0-2])\/\d{2}$"
+            >
+            
             </p>
         </section>
         <div id="validate">
-            <button type="submit">Validate the payment</button>
+            <h3>Finish your order:</h3>
+            <button type="submit" value="Validate payment">Validate the payment</button>
         </div>
 
     </form><!-- payment content END -->

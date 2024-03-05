@@ -3,12 +3,32 @@
 /* CSS rules for this project:
 
 - Identation is done by TAB, not SPACE.
-- Properties and values are written in new lines.
 - Colors and fonts are defined by variables (:root).
-- Setting sizes in "em"
+- Setting sizes in "rem"
 - Naming convention for classes are 'x'box, where 'x' is the type of box (f.e. contentbox)
 
 */
+
+/* CSS Reset */
+/* I didn't know that I actually needed to normalize the CSS with normalize.css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
 
 html {
   font-size: 16px;
@@ -25,7 +45,8 @@ html {
   --link-color: #f29c05;
   --button-color: #0583f2;
   --form-background: #1b0b87;
-  --form-width: 50vw;
+  --form-width: 40vw;
+  --form-max-width: 20rem;
   --info-background: #035aa7;
 }
 
@@ -42,8 +63,7 @@ body {
   background: var(--background);
   line-height: 1.2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
 h1,
@@ -94,6 +114,9 @@ button {
   box-sizing: border-box;
 }
 
+main {
+  width: var(--form-width) - 25%;
+}
 
 /* SPECIFIC STYLES */
 
@@ -101,19 +124,13 @@ h2 {
   margin-bottom: 1rem;
 }
 
-#payment-container {
-  width: 50vw;
-  max-width: 100%;
-}
-
 .section-content {
-  width: 50vw;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: var(--form-width);
+  max-width: var(--form-max-width);
 }
-
 
 #form {
   background: var(--form-background);
@@ -136,8 +153,6 @@ h2 {
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 2rem;
-  width: var(--form-width);
-  max-width: 100%;
 }
 
 #payment-info, #validate {
@@ -146,14 +161,15 @@ h2 {
   gap: 1rem;
 }
 
-
+#payment-info {
+  margin-bottom: 1rem;
+}
 
 button {
   width: calc(var(--form-width) - 50%);
-  max-width: 100%;
+  max-width: calc(var(--form-max-width) - 50%);
   background-color: var(--link-color);
   padding: 0.5rem;
-  margin-top: 2rem;
 }
 
 #carddetails {
@@ -170,17 +186,9 @@ button {
 
 @media screen and  (max-width: 720px) {
 
-    main {
-      width: 50vw;
-    }
-
-    #desc {
-    max-width: 100%;
+  main {
+    width: calc((--form-width) - 75%);
   }
-
-    #form {
-    max-width: 100%;
-    }
 
     #card, #number, #expiration {
     display: flex;
@@ -188,5 +196,8 @@ button {
     gap: nowrap;
   }
 
+    button {
+    width: calc(var(--form-width) + 25%);
+  }
   
 }
